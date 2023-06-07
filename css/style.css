@@ -1,0 +1,294 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.title {
+  margin-top: 30px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.title button {
+  cursor: pointer;
+  font-weight: bold;
+  background: none;
+  padding: 17px 45px;
+  border-radius: 10px;
+  font-size: 18px;
+  border: 1px solid black;
+  color: black;
+  margin: 5px;
+}
+.box-item {
+  border: 1px solid black;
+}
+
+.item-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+.item-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
+  padding: 30px;
+  color: white;
+  background: #000;
+}
+h2 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 29px;
+}
+
+.description {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  color: rgba(255, 255, 255, 0.56);
+}
+.more {
+  cursor: pointer;
+  color: skyblue;
+}
+
+.sub-title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 15px;
+}
+.title-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.box-item button {
+  background: #ffffff;
+  border: 1px solid #000000;
+  border-radius: 10px;
+  width: 100%;
+  height: 55px;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 350px);
+  justify-content: center;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 20px;
+}
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.active-btn {
+  color: white;
+  background: blue !important;
+}
+
+.cart-side {
+  position: fixed;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 0;
+  background: white;
+  border-radius: 10px 0 0 10px;
+  box-shadow: 0 0 50px #000;
+  overflow: hidden;
+}
+.close-cart {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  cursor: pointer;
+}
+
+.show {
+  display: block;
+  animation: open 1s ease;
+  width: 640px;
+}
+.hide {
+  overflow: hidden;
+  animation: close 1s ease;
+  width: 0;
+}
+
+@keyframes open {
+  from {
+    width: 0;
+  }
+  to {
+    width: 640px;
+  }
+}
+
+@keyframes close {
+  from {
+    width: 640px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+.scroll {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+.cart-box {
+  margin: 10px;
+  padding: 10px;
+  width: 620px;
+  margin-bottom: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 10px;
+  margin-right: 10px;
+  overflow: hidden;
+  padding-bottom: 200px;
+}
+.head .title {
+  margin-top: 20px;
+  font-size: 30px;
+  width: 640px;
+}
+
+.divider {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  margin: 15px 0;
+}
+
+.select-all {
+  display: flex;
+  position: sticky;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.cart-item {
+  display: flex;
+  background-color: transparent;
+}
+.cart-item:last-child {
+  padding-bottom: 20px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.12);
+  margin-bottom: 195px;
+}
+.item-title h3 {
+  font-size: 16px;
+}
+.item-title span {
+  font-size: 14px;
+  line-height: 25px;
+}
+
+input {
+  cursor: pointer;
+}
+
+.img-box {
+  width: 80px;
+  max-height: 100px;
+  margin: 0 20px;
+}
+.img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cart-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 640px;
+  height: 200px;
+  padding: 20px;
+  border-radius: 10px 0 0 0;
+  background: white;
+  box-shadow: 0px -5px 24px rgba(0, 0, 0, 0.55);
+}
+
+.cart-bottom p {
+  font-size: 16px;
+}
+
+.input-box {
+  width: 120px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+.input-box button {
+  width: 40px;
+  height: 40px;
+  background: none;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+.input-box input {
+  text-align: center;
+  width: 100%;
+  height: 40px;
+  background: none;
+  outline: none;
+  border: none;
+  cursor: text;
+}
+
+.delete {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+}
+
+.delete-box {
+  text-align: right;
+  margin-left: 20px;
+}
+
+.cart-bottom h3 {
+  margin-bottom: 20px;
+}
+
+.cart-btn {
+  width: 200px;
+  height: 50px;
+  background:  #7000ff;
+  color: black;
+  border-radius: 10px;
+  cursor: pointer;
+}
